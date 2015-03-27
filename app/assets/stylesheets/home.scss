@@ -1,0 +1,136 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@charset "UTF-8";
+
+body {
+	background-color:#ECEBE6;
+	//font-family: avenir, 'avenir next', helvetica, arial, sans-serif;
+	font-family: proxima-nova, helvetica, Avenir, arial, sans-serif;
+}
+
+
+// control all the content, basically center everything in center
+#allContentCenter {
+	position: absolute;
+	left: 50%;
+	width: 1000px;
+	transform: translatex(-50%);
+}
+
+// blocks are placed layer by layer, this is the sty for each block
+.centerblock {
+	border-radius: 10px;
+	box-shadow: 0px 0px 2px grey;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+//############################################################################################
+//--------------------headercss-------------------------------------------------------------
+//headerblcok containter
+#headerContainer {
+	height: 150px;
+	background-color: white;
+}
+
+// the name, stlye need to be designed
+#logo {
+	position: relative;
+	top: 50%;
+	left: 10%;
+	transform: translatey(-50%);
+	font-size: 250%;
+}
+//--------------------headercss  end---------------------------------------------------------
+
+
+//############################################################################################
+//--------------------Nav bar----------------------------------------------------------------
+//
+#navbarContainer {
+	overflow: hidden;
+	background-color: grey;
+}
+
+#navbar ul {
+	position: relative;
+	left: -2%;
+	overflow: hidden;
+	text-align: center;
+}
+
+#navbar li {
+	display: inline-block;
+	width: 180px;
+	text-align: center;
+	color: white;
+	font-size: 100%;
+}
+
+#navbar li:hover{
+	color: #D0D0D0;
+}
+
+//--------------------Nav bar End------------------------------------------------------------
+
+
+//############################################################################################
+//--------------------Paragraph--------------------------------------------------------------
+.paraLink {
+	text-decoration: none;
+		color: #00BFFF;
+}
+
+.paraLink:hover {
+	text-decoration: underline;
+}
+
+//--------------------Paragraph End-----------------------------------------------------------
+
+
+
+
+//############################################################################################
+//-------------------------Footer-------------------------------------------------------------
+#footer {
+	background-color: white;
+	padding: 5px;
+}
+
+//-------------------------Footer End---------------------------------------------------------
+
+#footer p {
+	position: relative;
+	left: 50%;
+	transform: translatex(-50%);
+}
+
+
+//############################################################################################
+//--------------------Home Content-----------------------------------------------------------
+//
+
+#homeContent {
+	background-color: white;
+}
+
+#homeContent p,h1 {
+	position: relative;
+	left: 50%;
+	transform: translatex(-50%);
+	width: 60%;
+}
+
+#homeContent p {
+	line-height: 29px;
+	font-size: 20px;
+	color: #4d4d4d;
+}
+
+#homeContent h1 {
+	text-align: center;
+}
+
+//--------------------Home Content End--------------------------------------------------------
