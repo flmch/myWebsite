@@ -1,0 +1,25 @@
+<div id = "contact" class = "centerblock" >
+	<br>
+	<p class = "flashNotice">
+		<%= flash.notice %>
+	<p>
+
+	<h2>Contact Me</h2>
+	<%= form_for(:contact, :html => {:id => "contactForm"}) do |c| %>
+		<%= c.label "Firstname(required):" %>
+		<%= c.text_field :firstname, :class => "stringInput" %><br>
+
+		<%= c.label "Lastname(required):" %>
+		<%= c.text_field :lastname, :class => "stringInput" %><br>
+
+		<%= c.label "Subject:" %>
+		<%= c.text_field :subject, :class => "stringInput" %><br>
+
+		<br>
+		<%= c.label "Message:" %><br>
+		<%= c.text_area :message, :class => "textInput" %><br>
+
+		<%= c.submit "Send", :class => "submitButton" %>
+	<% end %>
+	<br>
+</div>

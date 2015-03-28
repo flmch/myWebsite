@@ -16,6 +16,8 @@ body {
 	position: absolute;
 	left: 50%;
 	width: 1000px;
+	-moz-transform: translatex(-50%);
+	-webkit-transform: translatex(-50%);
 	transform: translatex(-50%);
 }
 
@@ -40,6 +42,8 @@ body {
 	position: relative;
 	top: 50%;
 	left: 10%;
+	-moz-transform: translatey(-50%);
+	-webkit-transform: translatey(-50%);
 	transform: translatey(-50%);
 	font-size: 250%;
 }
@@ -77,17 +81,35 @@ body {
 
 
 //############################################################################################
-//--------------------Paragraph--------------------------------------------------------------
+//--------------------Link-------------------------------------------------------------------
+.liLink {
+	text-decoration: none;
+	color: white;
+}
+
+.liLink:hover {
+	color: #D0D0D0;
+}
+
 .paraLink {
 	text-decoration: none;
-		color: #00BFFF;
+	color: #00BFFF;
 }
 
 .paraLink:hover {
 	text-decoration: underline;
 }
 
-//--------------------Paragraph End-----------------------------------------------------------
+.imglink {
+	margin-right: 10px;
+	opacity: 0.3;
+}
+
+.imglink:hover {
+	opacity: 1;
+}
+
+//--------------------Link End---------------------------------------------------------------
 
 
 
@@ -95,34 +117,60 @@ body {
 //############################################################################################
 //-------------------------Footer-------------------------------------------------------------
 #footer {
+	position: relative;
 	background-color: white;
-	padding: 5px;
+	padding: 10px;
+	height: 40px;
+}
+
+#footerNote {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-moz-transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	color: #4d4d4d;
+	font-style: italic;
+}
+
+#network {
+	display: inline-block;
+	position: absolute;
+	right: 0%;
+	top: 50%;
+	-moz-transform: translatey(-50%);
+	-webkit-transform: translatey(-50%);
+	transform: translatey(-50%);
+	margin-right: 10px;
+	//background-color: blue;
 }
 
 //-------------------------Footer End---------------------------------------------------------
 
-#footer p {
-	position: relative;
-	left: 50%;
-	transform: translatex(-50%);
-}
 
 
 //############################################################################################
 //--------------------Home Content-----------------------------------------------------------
 //
+//Some content styles are overlapping, so they are copied here
 
+#contact,
+#experinceContent,
 #homeContent {
 	background-color: white;
 }
 
-#homeContent p,h1 {
+#homeContent p,h1,h2,h3 {
 	position: relative;
 	left: 50%;
+	-moz-transform: translatex(-50%);
+	-webkit-transform: translatex(-50%);
 	transform: translatex(-50%);
 	width: 60%;
 }
 
+#experinceContent p,
 #homeContent p {
 	line-height: 29px;
 	font-size: 20px;
@@ -134,3 +182,107 @@ body {
 }
 
 //--------------------Home Content End--------------------------------------------------------
+
+
+//############################################################################################
+//--------------------Experince Content-------------------------------------------------------
+//
+
+#experinceContent p {
+	position: relative;
+	left: 50%;
+	-moz-transform: translatex(-50%);
+	-webkit-transform: translatex(-50%);
+	transform: translatex(-50%);
+	text-align: left;
+	width: 60%;
+	//background-color: red;
+}
+
+#TTwork {
+	text-align: center;
+}
+
+#TTwork img{
+	-moz-transition:-moz-transform 0.5s ease-in; 
+    -webkit-transition:-webkit-transform 0.5s ease-in; 
+    -o-transition:-o-transform 0.5s ease-in;
+}
+
+#TTwork img:hover {
+	position: relative;
+	z-index: 999;
+	-moz-transform:scale(2); 
+    -webkit-transform:scale(2); 
+    -o-transform:scale(2);
+}
+
+#TTwork p {
+	margin: 0;
+	font-size: 14px;
+	font-style: italic;
+}
+
+//--------------------Experince Content End----------------------------------------------------
+
+//############################################################################################
+//--------------------Contact Content---------------------------------------------------------
+//
+
+#contactForm {
+	padding: 30px;
+	text-align: left;
+	line-height: 29px;
+	font-size: 20px;
+	color: #4d4d4d;
+	width: 60%;
+	position: relative;
+	left: 50%;
+	-moz-transform: translatex(-50%);
+	-webkit-transform: translatex(-50%);
+	transform: translatex(-50%);	
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 10px;
+	box-shadow: 2px 2px 4px grey;
+}
+
+.stringInput {
+	margin: 10px;
+	width: 200px;
+	height: 25px;
+	border-radius: 5px;
+	font-size: 20px;
+}
+
+.textInput {
+	margin: 10px;
+	width: 95%;
+	height: 200px;
+	font-size: 20px;
+}
+
+.flashNotice {
+	position: relative;
+	left: 5%;
+	color: red;
+	font-size: 20px;
+}
+
+.submitButton {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	width: 100px;
+	height: 30px;
+
+	border-radius: 5px;
+	font-size: 15px;
+	background-color: #D8D8D8;
+
+	position: relative;
+	left: 50%;
+	-moz-transform: translatex(-50%);
+	-webkit-transform: translatex(-50%);
+	transform: translatex(-50%);
+}

@@ -1,7 +1,7 @@
 
 	<div id = "headerContainer" class = "centerblock">
 		<div id = "logo">
-		Trump = Xi Zhang
+		Trump {Xi Zhang}
 		</div>
 	</div>
 
@@ -9,11 +9,19 @@
 	<div id = "navbarContainer" class = "centerblock">
 		<div id= "navbar">
 			<uL>
-				<li>Home</li>
-				<li>Coding Blog</li>
-				<li>Experience</li>
+				<li>
+					<%= link_to "Home", "/home", :class => "liLink" %>
+				</li>
+				<li>
+					<%= link_to "Coding Blog", "/blog", :class => "liLink" %>
+				</li>
+				<li>
+					<%= link_to "Experience", "/experience", :class => "liLink" %>
+				</li>
 				<li>Interest</li>
-				<li>Contact</li>
+				<li>
+					<%= link_to "Contact", "/contact", :class => "liLink" %>
+				</li>
 			</ul>
 		</div>
 	</div>
