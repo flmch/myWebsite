@@ -155,12 +155,15 @@ body {
 //
 //Some content styles are overlapping, so they are copied here
 
+#blogContent,
 #contact,
 #experinceContent,
 #homeContent {
 	background-color: white;
 }
 
+#blogContent p,
+#experinceContent p,
 #homeContent p,h1,h2,h3 {
 	position: relative;
 	left: 50%;
@@ -170,6 +173,7 @@ body {
 	width: 60%;
 }
 
+#blogContent p,
 #experinceContent p,
 #homeContent p {
 	line-height: 29px;
@@ -187,17 +191,6 @@ body {
 //############################################################################################
 //--------------------Experince Content-------------------------------------------------------
 //
-
-#experinceContent p {
-	position: relative;
-	left: 50%;
-	-moz-transform: translatex(-50%);
-	-webkit-transform: translatex(-50%);
-	transform: translatex(-50%);
-	text-align: left;
-	width: 60%;
-	//background-color: red;
-}
 
 #TTwork {
 	text-align: center;
@@ -285,4 +278,14 @@ body {
 	-moz-transform: translatex(-50%);
 	-webkit-transform: translatex(-50%);
 	transform: translatex(-50%);
+}
+
+//--------------------Contact Content End-----------------------------------------------------
+
+
+//############################################################################################
+//--------------------Blog Content------------------------------------------------------------
+//
+#blogContent pre {
+	background-color: #E0E6F8;
 }

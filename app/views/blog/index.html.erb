@@ -1,1 +1,165 @@
-<h1> blog goes here </h1>
+<div id = "blogContent", class = "centerblock">
+	<br>
+	<h3>[Leetcode] Linked List Cycle</h3>
+	<p><b>Question</b>: Given a linked list, determine if it has a cycle in it.</p>
+	<pre><code class = "language-css">
+	class Solution {
+	public: 
+    	bool hasCycle(ListNode *head) {
+        	if(!head||!head->next){return false;}
+        	ListNode *fast=head->next, *slow=head;
+        	while(fast&&slow!=fast){
+            	fast=fast->next;
+            	if(fast&&slow!=fast){
+                	fast=fast->next;
+                	slow=slow->next;
+            	}
+        	}
+        	return slow==fast;
+    	}
+	};
+	</code></pre>
+
+	<br>
+	<h3>[Leetcode] Merge k Sorted Lists</h3>
+	<p><b>Question</b>: Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.</p>
+	<pre><code class = "language-css">
+	/**
+ 	* Definition for singly-linked list.
+ 	* struct ListNode {
+ 	*     int val;
+ 	*     ListNode *next;
+ 	*     ListNode(int x) : val(x), next(NULL) {}
+ 	* };
+ 	*/
+ 
+    	ListNode *mergeTwoLists(ListNode *l1, ListNode *l2) {
+        	if(!l1&&!l2){return l1;}
+        	if(!l1){return l2;}
+        	if(!l2){return l1;}
+        	ListNode *resulthead, *lastval;
+        	ListNode *temp = l1->val<=l2->val ? l1:l2;
+        	temp==l1 ? l1=l1->next : l2=l2->next;
+        	temp->next=NULL;
+        	resulthead=temp;
+        	lastval=temp;
+        	while(l1&&l2){
+            	temp = l1->val<=l2->val ? l1:l2;
+            	temp==l1 ? l1=l1->next : l2=l2->next;
+            	temp->next=NULL;
+            	lastval->next=temp;
+            	lastval=lastval->next;
+        	}
+        	l1 ? lastval->next = l1 : lastval->next = l2;
+        
+        	return resulthead;
+    	} 
+ 
+		class Solution {
+		public:
+    	ListNode *mergeKLists(vector<ListNode *> &lists) {
+         	int len=lists.size();
+         	if(len==0){
+             	return NULL;
+         	}else if(len==1){
+             	return lists[0];
+         	}else if(len==2){
+             	return mergeTwoLists(lists[0],lists[1]);
+         	}else{
+             	vector<ListNode *> sub1;
+             	vector<ListNode *> sub2;
+             	sub1.assign(lists.begin(),lists.begin()+len/2);
+             	sub2.assign(lists.begin()+len/2,lists.end());
+             	return mergeTwoLists(mergeKLists(sub1),mergeKLists(sub2));
+         	}  
+    	}
+	};	
+	</code></pre>
+
+	<br>
+	<h3>[Leetcode] Longest Substring Without Repeating Characters </h3>
+	<p><b>Question</b>: Given a string, find the length of the longest substring without repeating characters. For example, the longest substring without repeating letters for "abcabcbb" is "abc", which the length is 3. For "bbbbb" the longest substring is "b", with the length of 1.</p>
+
+	<pre><code class = "language-css">
+		class Solution {
+		public:
+    		int lengthOfLongestSubstring(string s) {
+        		unordered_map<char,int> mymap;
+        		int len=s.size();
+        
+        		int result=0;
+        		int currentlength=0;
+        		int start=0;
+        		for(int i=0;i<len;i++){
+            		if(mymap.find(s[i])!=mymap.end()){
+                		start=start>mymap[s[i]]?start:mymap[s[i]];
+                		currentlength=i-start;
+                
+            		}else{
+                		currentlength++;
+                		//mymap[s[i]]=i;
+            		}
+            		mymap[s[i]]=i;
+            		//mymap.insert(pair<char,int>(s[i],i));
+            		result=currentlength>result?currentlength:result;
+        		}
+        
+        		return result;
+    		}
+		};
+	</pre></code>
+	
+	<br>
+	<h3>[Leetcode] Convert Sorted Array to Binary Search Tree  </h3>
+	<p><b>Question</b>: Given an array where elements are sorted in ascending order, convert it to a height balanced BST.</p>
+	<pre><code class = "language-css">
+		/**
+ 		* Definition for binary tree
+		* struct TreeNode {
+		*     int val;
+		*     TreeNode *left;
+		*     TreeNode *right;
+		*     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+		* };
+		*/
+ 
+		 TreeNode *arraytoBST(vector<int> num,TreeNode *&head){
+		        int len=num.size();
+		        if(len>0){
+		            TreeNode *temp=new TreeNode(num[len/2]);
+		            head=temp;
+		        
+		        vector<int> subvec1;
+		        vector<int> subvec2;
+		        subvec1.assign(num.begin(),num.begin()+len/2);
+		        subvec2.assign(num.begin()+(len/2+1),num.end());
+		            
+		            head->left=arraytoBST(subvec1,head->left);
+		            head->right=arraytoBST(subvec2,head->right);
+		        
+		        return head;    
+		        }else{
+		            return head;
+		        }
+		        
+		 }
+ 
+		class Solution {
+		public:
+		    TreeNode *sortedArrayToBST(vector<int> &num) {
+		            TreeNode *head=NULL;
+		            head=arraytoBST(num,head);
+		            return head;
+		    }
+		};
+	</pre></code>
+
+	<br>
+	<p>Check all my solutions at 
+		<%= link_to "Github", "https://github.com/trump812/Algorithm-Leetcode-",
+							 	:class => "paraLink",
+							 	:target => "_blank" %>,
+		More blogs comming...
+	</p>
+	<br>
+</div>
