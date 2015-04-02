@@ -1,4 +1,4 @@
-window.onload = function(){
+$(document).ready(function() {
 	var table = document.getElementById("caltable");
 	var cells = table.getElementsByTagName("th");
 
@@ -49,9 +49,10 @@ window.onload = function(){
 		}
 	}
 
+
 	function getResult(s, cur, la){
 		if(s == "+"){
-			return la + parseInt(cur);
+			return parseInt(la) + parseInt(cur);
 		}else if( s == "-" ){
 			return la - cur
 		}else if( s == "x" ){
@@ -60,4 +61,4 @@ window.onload = function(){
 			return la/cur;
 		}
 	}
-}
+});
