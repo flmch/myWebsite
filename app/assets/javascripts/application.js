@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require prism
+//= require script
 //= require_tree .
