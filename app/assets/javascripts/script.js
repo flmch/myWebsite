@@ -51,7 +51,7 @@ window.onload = function(){
 
 	function getResult(s, cur, la){
 		if(s == "+"){
-			return la + parseInt(cur);
+			return parseInt(la) + parseInt(cur);
 		}else if( s == "-" ){
 			return la - cur
 		}else if( s == "x" ){
