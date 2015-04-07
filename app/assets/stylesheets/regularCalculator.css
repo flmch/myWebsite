@@ -65,29 +65,15 @@
   	//transform: translateY(-50%);
 }
 
-.grey {
+.calculatorGrey {
 	background-color: #989898;
 }
 
-.white {
+.calculatorWhite {
     background-color: #F8F8F8;
 }
 
-.orange {
+.calculatorOrange {
 	background-color: orange;
 	color: white;
-}
-
-.calReload {
-	cursor: pointer;
-	width: 150px;
-	height: 50px;
-	background-color: #D6ADFF;
-	font-size: 20px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 15px;
-	padding: 5px;
-	border-radius: 5px;
-	border: 1px dotted black;
 }
