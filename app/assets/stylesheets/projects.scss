@@ -1,0 +1,86 @@
+// Place all the styles related to the projects controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#calContainer {
+	width: 800px;
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);		
+	text-align: center;
+	font-size: 30px;
+	font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+}
+
+#calContainer table {
+	position: relative;
+	left: 50%;
+	-webkit-transform: translatex(-50%);
+	transform: translatex(-50%);	
+	border-collapse: collapse;
+	font-weight: lighter;
+}
+
+#calContainer tr {
+
+}
+
+#calContainer th {
+	border: 0;
+	border: 1px solid black;
+	margin: 0px;
+	padding: 5px;
+	width: 60px;
+	height: 60px;
+}
+
+.display {
+	border: 1px solid grey;
+	position: relative;
+	left: 50%;
+	-webkit-transform: translatex(-50%);
+	transform: translatex(-50%);		
+	text-align: right;
+	font-size: 25px;
+	width: 263px;
+	height: 90px;
+	padding-right: 10px;
+	padding-left: 10px;
+	letter-spacing: 0px;
+	background-color: #202020 ;
+	color: white;
+	background: -webkit-linear-gradient(#080808, #505050); /* For Safari 5.1 to 6.0 */
+  	background: -o-linear-gradient(#080808, #505050); /* For Opera 11.1 to 12.0 */
+  	background: -moz-linear-gradient(#080808, #505050); /* For Firefox 3.6 to 15 */
+  	background: linear-gradient(#080808, #505050); /* Standard syntax */
+}
+
+.display p {
+	//vertical-align: text-bottom;
+	display: block;
+	color: white;
+	font-size: 25px;
+	position: relative;
+	overflow: auto;
+	resize: horizontal;
+	top: 20%;
+	left: 60%;
+	//-webkit-transform: translateY(-50%);
+  	//-ms-transform: translateY(-50%);
+  	//transform: translateY(-50%);
+}
+
+.grey {
+	background-color: #989898;
+}
+
+.white {
+    background-color: #F8F8F8;
+}
+
+.orange {
+	background-color: orange;
+	color: white;
+}

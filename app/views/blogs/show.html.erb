@@ -3,9 +3,16 @@
 
 	<p><%= @blog.content %>
 
-	<br><%= link_to "Edit blog", edit_blog_path(@blog) %>
-	<%= link_to "Delete blog", blog_path(@blog), method: :delete,
-												 data: {confirm: "Sure to delete blog?"} %>
+		<pre><code class = "language-css">
+		<%= @blog.code %>
+		</code></pre>
 
-	<br><%= link_to "Back to blog list", blogs_path() %></p>
+	<br><p><%= link_to "Edit blog", edit_blog_path(@blog), 
+									:class=>"blogContentLink btn btn-blue btn-edit-delete aligncenter-edit-delete" %>
+	<%= link_to "Delete blog", blog_path(@blog), method: :delete,
+												 data: {confirm: "Are you sure to delete blog?"},
+												 :class=>"blogContentLink btn btn-red btn-edit-delete aligncenter-edit-delete" %></p>
+
+	<p><%= link_to "Back to blog list", blogs_path(), 
+									:class => "blogContentLink btn btn-white btn-back aligncenter" %></p><br>
 </div>
