@@ -1,9 +1,16 @@
-<div id = "blogContent" class = "centerblock">
+<div class = "centerblock blogContent">
 
-	<br>
-	<h3>[OdinProject] Javascript Calculator </h3>
+    <br><p><%= link_to "Create New Blog", new_blog_path(), :class => "blogContentLink" %></p>
+	
+	<h2>Algorithm and Data Structure Problems I've Solved</h2>
 
-	<%= render partial: "calculator" %>
+	<ol>
+		<% @blogs.each do |b| %>
+			<li><p><%= link_to b.name, blog_path(b), :class => "blogContentLink" %></p></li>
+		<% end %>
+	</ol>
+
+	
 
 	<br>
 	<h3>[Leetcode] Linked List Cycle</h3>

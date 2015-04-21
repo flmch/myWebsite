@@ -1,0 +1,11 @@
+<div class = "centerblock blogContent">
+	<br><h2><%= @blog.name %></h2>
+
+	<p><%= @blog.content %>
+
+	<br><%= link_to "Edit blog", edit_blog_path(@blog) %>
+	<%= link_to "Delete blog", blog_path(@blog), method: :delete,
+												 data: {confirm: "Sure to delete blog?"} %>
+
+	<br><%= link_to "Back to blog list", blogs_path() %></p>
+</div>

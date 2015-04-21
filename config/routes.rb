@@ -6,7 +6,7 @@ Rails.application.routes.draw do
    root 'home#index'
 
    resources :home, only: [:index];
-   resources :blog;
+   resources :blogs;
    resources :experience, only: [:index];
    resources :contact, only: [:index,:create];
 

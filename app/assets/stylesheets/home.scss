@@ -155,14 +155,14 @@ body {
 //
 //Some content styles are overlapping, so they are copied here
 
-#blogContent,
+.blogContent,
 #contact,
 #experinceContent,
 #homeContent {
 	background-color: white;
 }
 
-#blogContent p,
+.blogContent p,
 #experinceContent p,
 #homeContent p,h1,h2,h3 {
 	position: relative;
@@ -173,7 +173,7 @@ body {
 	width: 60%;
 }
 
-#blogContent p,
+.blogContent p,
 #experinceContent p,
 #homeContent p {
 	line-height: 29px;
@@ -286,7 +286,11 @@ body {
 //############################################################################################
 //--------------------Blog Content------------------------------------------------------------
 //
-#blogContent pre {
+.blogContentLink {
+	text-decoration: none;
+	color: #4d4d4d;
+}
+.blogContent pre {
 	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
