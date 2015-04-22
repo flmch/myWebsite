@@ -22,6 +22,14 @@ ActiveRecord::Schema.define(version: 20150421153122) do
     t.text     "code"
   end
 
+  create_table "coding_blogs", force: :cascade do |t|
+    t.string   "title"
+    t.string   "author"
+    t.text     "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "contacts", force: :cascade do |t|
     t.string   "firstname"
     t.string   "lastname"

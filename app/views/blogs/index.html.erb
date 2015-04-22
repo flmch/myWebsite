@@ -1,14 +1,15 @@
 <div class = "centerblock blogContent">
 
-	<br><h1>My Solutions for Algorithm Problems</h1><br>
+	<br><h1>My Solutions for Algorithm Problems</h1><hr style="width:60%"><br>
 
 	<p><%= link_to "Post New Problem", new_blog_path(),
-    							:class => "blogContentLink btn btn-blue btn-newBlog aligncenter" %></p><br>
+    							:class => "blogContentLink btn btn-blue btn-newBlog aligncenter" %></p><br><hr style="width:60%">
 
+    <h2>Problems List:</h2>							
 	<ul>
 		<% @blogs.each do |b| %>
-			<li><p class = "singleblog"><%= link_to b.name, blog_path(b), 
-			:class => "blogContentLink blogContentLink-grey" %></p></li>
+			<li><%= link_to b.name, blog_path(b), 
+			:class => "blogContentLink blogContentLink-grey singleblog" %></li>
 		<% end %>
 	</ul>
 

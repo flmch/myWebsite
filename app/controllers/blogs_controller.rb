@@ -13,9 +13,12 @@ class BlogsController < ApplicationController
 
 	def create
 		@blog = Blog.new(blog_params)
-		@blog.save
-
-		redirect_to blog_path(@blog)
+		if @blog.save
+			flash.notice = "new post \"#{@blog.name}\" created"
+			redirect_to blog_path(@blog)
+		else
+            render "new"
+		end
 	end
 
 	def edit
@@ -24,15 +27,18 @@ class BlogsController < ApplicationController
 
 	def update
 		@blog = Blog.find(params[:id])
-		@blog.update(blog_params)
-
+		if @blog.update(blog_params)
+			flash.notice = "\"#{@blog.name}\" updated"
+		end
 		redirect_to blog_path(@blog)
+
 	end
 
 	def destroy
 		@blog = Blog.find(params[:id])
 		@blog.destroy
 
+		flash.notice = "\"#{@blog.name}\" deleted"
 		redirect_to blogs_path()
 	end
 

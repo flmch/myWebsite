@@ -10,6 +10,7 @@ Rails.application.routes.draw do
    resources :experience, only: [:index];
    resources :contact, only: [:index,:create];
    get "/projects", to: "projects#index"
+   get "/projects/iphonecal", to: "projects#iphonecal"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

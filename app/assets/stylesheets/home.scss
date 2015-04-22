@@ -64,7 +64,7 @@ textarea {
 //--------------------End of equently used------------------------------------------------------
 
 
-// control all the content, basically center everything in center
+// control all the content, basically center everything 
 #allContentCenter {
 	position: absolute;
 	left: 50%;
@@ -215,6 +215,7 @@ textarea {
 	background-color: white;
 }
 
+.blogContent form,
 .blogContent p,
 #experinceContent p,
 #homeContent p,h1,h2,h3 {
@@ -232,6 +233,17 @@ textarea {
 	line-height: 29px;
 	font-size: 20px;
 	color: #4d4d4d;
+}
+
+.blogContent ul {
+	position: relative;
+	left: 50%;
+	-moz-transform: translatex(-50%);
+	-webkit-transform: translatex(-50%);
+	transform: translatex(-50%);
+	width: 60%;
+	color: #4d4d4d;
+	font-size: 20px;
 }
 
 #homeContent h1 {
@@ -353,17 +365,18 @@ textarea {
 	-moz-transform: translatex(-50%);
 	-webkit-transform: translatex(-50%);
 	transform: translatex(-50%);
-	width: 80%;
+	width: 70%;
 	background-color: #CEE3F6;
 	border: 2px dashed grey;
 }
 
 .singleblog {
-	padding-left: 60px;
-	padding-bottom: 2px;
-	border-left: 1px solid #D0D0D0;
-	border-bottom: 1px solid #D0D0D0;
-	box-shadow: -1px 1px 1px grey;
+	display: block;
+	padding: 5px 40px;
+	border: 1px solid #D0D0D0;
+	//border-bottom: 1px solid #D0D0D0;
+	box-shadow: 1px 1px 1px grey;
+	margin: 10px 0px;
 }
 
 .singleblog:hover {
@@ -372,8 +385,8 @@ textarea {
 }
 
 .btn-newBlog {
-	padding: 10px 25px;
-	font-size: 20px;
+	padding: 15px 35px;
+	font-size: 25px;
 }
 
 .btn-edit-delete {
@@ -388,6 +401,10 @@ textarea {
 	padding: 5px 15px;
 }
 
+.btn-back:hover {
+	background-color: #D8D8D8;
+}
+
 .btn-submit {
 	border: 0px;
 	width: 232px;
@@ -399,4 +416,41 @@ textarea {
 .btn-submit:hover {
 	background-color: #00aaff;
 	cursor: pointer;
+}
+
+.alignForm {
+	position: relative;
+	display: block;	
+	line-height: 29px;
+	font-size: 20px;
+	color: #4d4d4d;
+}
+
+.errorStyle {
+	margin: 2px;
+	color: red;
+}
+
+//--------------------Blog Content End-----------------------------------------------------
+
+//############################################################################################
+//--------------------Project Content--------------------------------------------------------
+//
+
+.projectItem {
+	font-size: 20px;
+	display: inline-block;
+	width: 220px;
+	height: 220px;
+	//background-color: #D8D8D8;
+	border-radius: 10px;
+	padding: 10px;
+	margin: 30px 43px;
+	text-align: center;
+	background: -webkit-linear-gradient(#F2F2F2,#D8D8D8); 
+  	background: -o-linear-gradient(#F2F2F2,#D8D8D8); 
+  	background: -moz-linear-gradient(#F2F2F2,#D8D8D8); 
+  	background: linear-gradient(#F2F2F2,#D8D8D8); 
+  	box-shadow: 1px 1px 3px #D8D8D8;
+  	border: 1px solid #848484;
 }

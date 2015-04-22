@@ -1,6 +1,6 @@
 class Blog < ActiveRecord::Base
 		validates :name, presence: true,
-						  length: { minimum: 1};
-		validates :content, presence: true,
-						  length: { minimum: 1};
+						 uniqueness: true
+		validates :content, presence: true
+		validates :code, presence: true
 end

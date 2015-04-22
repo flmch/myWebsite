@@ -1,15 +1,18 @@
 <%= form_for(@blog) do |b| %>
-	<p>
-		<%= b.label :name %>
-		<%= b.text_field :name, :class => "stringInput" %>
-	</p>
-	<p>
-		<%= b.label :content %><br>
-		<%= b.text_area :content, :class => "textInput" %>
-	</p>
-	<p>
-		<%= b.label :code %><br>
-		<%= b.text_area :code, :class => "textInput" %>
-	</p>
+	
+	  <% @blog.errors.full_messages.each do |error| %>
+	    <div class="errorStyle">* <%= error %></div><br>
+	  <% end %>
+	
+	
+		<br><%= b.label :name, "Problem Title:", :class => "alignForm" %>
+		<%= b.text_field :name, :class => "stringInput alignForm" %>
+
+		<br><%= b.label :content, "Question:", :class => "alignForm" %>
+		<%= b.text_area :content, :class => "textInput alignForm" %>
+
+		<br><%= b.label :code, "Code:", :class => "alignForm" %>
+		<%= b.text_area :code, :class => "textInput alignForm" %>
+	
 	<p><%= b.submit "Submit", :class=>"blogContentLink btn btn-blue btn-submit aligncenter" %></p>
 <% end %>
