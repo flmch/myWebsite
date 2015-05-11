@@ -1,0 +1,59 @@
+
+.centerElement {
+	position: relative;
+	left: 50%;
+    -moz-transform: translatex(-50%);
+	-webkit-transform: translatex(-50%);
+	transform: translatex(-50%);
+	text-align: center;
+}
+
+#mainBoardSNK {
+	position: relative;
+	display: inline-block;
+	width: 450px;
+	height: 450px;
+	left: 18%;
+}
+
+#scoreBoardSNK {
+	position: relative;
+	display: inline-block;
+	font-size: 28px;
+	vertical-align: top;
+	left: 10%;
+}
+
+.startBtnSNK {
+	display: block;
+	width: 100px;
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 5px;
+	margin: 5px;
+}
+
+.startBtnSNK:hover{
+	cursor: pointer;
+	background-color: #D8D8D8;
+}
+
+.rowElementSNK {
+	height: 15px;
+}
+
+.cellElementSNK {
+	width: 13px;
+	height: 13px;
+    display: inline-block;
+    border: 1px solid #B1B1B1;
+    vertical-align: top;
+}
+
+.snakeBodySNK {
+	background-color: red;
+}
+
+.foodSNK {
+	background-color: blue;
+}

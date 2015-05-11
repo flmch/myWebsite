@@ -1,0 +1,28 @@
+.resetBtnTTT {
+	position: relative;
+	width: 100px;
+	border: 1px solid black;
+	padding: 5px 15px;
+	border-radius: 5px;
+}
+
+.resetBtnTTT:hover {
+	cursor: pointer;
+	background-color: #D8D8D8;
+}
+
+#mainBoardTTT {
+	border-radius: 5px;
+	position: relative;
+	left: 50%;
+}
+
+.cellElementTTT {
+	display: inline-block;
+	vertical-align: top;
+	border: 1px solid black;
+	text-align: center;
+	line-height: 100px;
+	font-size: 50px;
+	z-index: 10;
+}

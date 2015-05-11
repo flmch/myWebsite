@@ -4,4 +4,10 @@ class ProjectsController < ApplicationController
 
 	def iphonecal
 	end
+
+	def snake
+	end
+
+	def tictactoe
+	end
 end

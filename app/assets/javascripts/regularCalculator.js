@@ -1,5 +1,4 @@
 var regularCalculator = function(){
-	console.log("test");
 	function getResult(s, cur, la){
 		if(s == "+"){
 			return parseInt(la) + parseInt(cur);

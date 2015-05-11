@@ -11,6 +11,8 @@ Rails.application.routes.draw do
    resources :contact, only: [:index,:create];
    get "/projects", to: "projects#index"
    get "/projects/iphonecal", to: "projects#iphonecal"
+   get "/projects/snake", to: "projects#snake"
+   get "/projects/tictactoe", to: "projects#tictactoe"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
